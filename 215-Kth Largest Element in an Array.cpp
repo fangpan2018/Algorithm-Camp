@@ -1,0 +1,18 @@
+// faster than 34.61%
+// less than 71.21%
+
+// min heap
+
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        priority_queue<int, vector<int>, greater<int>> pq;
+        for (int num : nums) {
+            pq.push(num);
+            if (pq.size() > k) {
+                pq.pop();
+            }
+        }
+        return pq.top();
+    }
+};
