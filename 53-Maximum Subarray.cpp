@@ -24,3 +24,17 @@ public:
         return re;
     }
 };
+// 
+// 动态规划的做法。
+// 
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int l = nums.size(), maxsum = nums[0];
+        for(int i=1; i<l; i++){
+            if(nums[i-1]>0) nums[i] += nums[i-1];
+            maxsum = max(maxsum, nums[i]);
+        }
+        return maxsum;
+    }
+};

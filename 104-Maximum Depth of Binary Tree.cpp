@@ -10,3 +10,27 @@ public:
         return 1 + ((l >= r) ? l : r);
     }
 };
+
+
+// 递归，要多做。
+// /**
+//  * Definition for a binary tree node.
+//  * struct TreeNode {
+//  *     int val;
+//  *     TreeNode *left;
+//  *     TreeNode *right;
+//  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+//  * };
+//  */
+// class Solution {
+// public:
+//     int maxDepth(TreeNode* root) {
+//         if(root){
+//             int l = 1+maxDepth(root->left);
+//             int r = 1+maxDepth(root->right);
+//             return l>r?l:r;
+//         }else{
+//             return 0;
+//         }
+//     }
+// };

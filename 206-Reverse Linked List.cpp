@@ -31,3 +31,20 @@ public:
         }else return head;
     }
 };
+
+// 
+// 三个指针，每次修改指针前要用一个指针指到下一个。
+// 
+// class Solution {
+// public:
+//     ListNode* reverseList(ListNode* head) {
+//         ListNode *pre = NULL, *cur = head, *i;
+//         while(cur){
+//             i = cur->next;
+//             cur->next = pre;
+//             pre = cur;
+//             cur = i;
+//         }
+//         return pre;
+//     }
+// };

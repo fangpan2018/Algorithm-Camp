@@ -11,3 +11,16 @@ public:
         return num;
     }
 };
+
+
+
+// class Solution {
+// public:
+//     int singleNumber(vector<int>& nums) {
+//         int zero = 0;
+//         for(int i:nums){
+//             zero ^= i;
+//         }
+//         return zero;
+//     }
+// };

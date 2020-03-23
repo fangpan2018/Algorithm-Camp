@@ -9,6 +9,26 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
+// class Solution {
+// public:
+//     ListNode* removeNthFromEnd(ListNode* head, int n) {
+//         queue<ListNode*> re;
+//         ListNode* prehead = new ListNode;
+//         prehead->next = head;
+//         head = prehead;
+//         while(head){
+//             re.push(head);
+//             head = head->next;
+//             if(re.size()>n+1) re.pop();
+//         }
+//         re.front()->next = re.front()->next->next;
+//         return prehead->next;
+//     }
+// };
+
+// 用双指针要好些。加哨兵。
+
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
